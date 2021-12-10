@@ -7,7 +7,7 @@ Your favorite store is: <?php echo $_POST["fav_store"]; ?><br>
 database insertion
 A record for name, address, and store has benn inserted.
 
-<h3><a>Home Site</a></h3>
+<h3><a href="formDBSec3.html">Home Site</a></h3>
 
 </body>
 </html>
