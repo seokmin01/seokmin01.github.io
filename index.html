@@ -1,77 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>그린포인트</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <title>씬나는 와이키키 팀모임</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Noto Sans KR 폰트 적용 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
-    <!-- link style.css -->
-    <link rel="stylesheet" href="style.css">
-    <script>
-        var member = ["강민경", "강유리", "강희준", "기노은", "김민영", "김성윤", "김시현", "김예준", "김지온", "김형진", "김희원", "박도현", "방승민", "백승현", "성시은", "손우현", "심재욱", "양희윤", "오신영", "이가현", "이용석", "임성훈", "장수민", "장재영", "정석민", "정현희", "한선도"];
-        var gift_name = ["김민영", "손우현", "장재영", "박도현", "한선도", "강유리", "방승민", "김시현", "김성윤", "김예준", "성시은", "임성훈", "강희준", "심재욱", "장수민", "기노은", "이용석", "양희윤", "정석민", "김형진", "김지온", "강민경", "정현희", "백승현", "이가현", "김희원", "오신영"];
-        var gift_key = ["1등", "가지러 가기 귀찮은 것", "개구리", "겨필템", "김광진", "나홀로집에", "넌 아주 사랑스런 사람이며,<br>네 인생은 사랑으로<br>가득차리라", "네덜란드", "문구", "美(아름다울 미)", "소소하게", "쇠고기무국", "수박", "심재욱", "아프리카", "양보", "이용석", "장재영", "잼민이", "창의력", "최준", "축구", "피치", "힐링", "J가 되고싶은 P", "Let it snow", "My favorite thing"];
-        var num = 27;
-        var cnt = 0;
-        var dupl = [];
-        for (var i = 0; i < num; i++) {
-            dupl[i] = 0;
-        }
-        member.sort(() => Math.random() - 0.5);
-        function func() {
-            location.reload();
-            alert('순서가 섞였습니다.');
-        }
-        function click_key(i) {
-            if (dupl[i] == 0) {
-                if (gift_key[i].startsWith('넌 아주 사랑스런 사람이며,'))
-                    document.getElementById('btn' + i).innerText = '넌 아주 사랑스런 사람 ...\n' + gift_name[i] + ' -> ' + member[cnt];
-                else
-                    document.getElementById('btn' + i).innerText = gift_key[i] + '\n' + gift_name[i] + ' -> ' + member[cnt];
-                document.getElementById('btn' + i).setAttribute("style", "background-color: #5cb85c; color: #fff;");
-                cnt++;
-                dupl[i] = 1;
-            }
-        }
-    </script>
-</head>
-
-<body>
-    <div class="content">
-        <div style="float: left; width: 25%; margin-top: 40px; margin-right: 7%;">
-            <table class="table">
-                <tr>
-                    <th>순서</th>
-                    <td><button class="btn btn-success" onclick="func()">순서
-                            섞기</button></td>
-                </tr>
-                <div>
-                    <script id="member-table">
-                        for (var i = 0; i < num; i += 2) {
-                            if (i == num - 1) {
-                                document.write('<tr><td>' + (i + 1) + '</td><td>' + member[i] + '<td/><td></td><td><td/></tr>');
-                            }
-                            else {
-                                document.write('<tr><td>' + (i + 1) + '</td><td>' + member[i] + '<td/><td>' + (i + 2) + '</td><td>' + member[i + 1] + '<td/></tr>');
-                            }
-                        }
-                    </script>
-                </div>
-            </table>
-        </div>
-        <div class="cards" style="float: left; width: 64%; margin-top: 25px; justify-content: space-between;">
-            <script>
-                for (var i = 0; i < num; i++) {
-                    document.write('<button id="btn' + i + '" class="gift btn btn-outline-success" onclick="click_key(' + i + ')">' + gift_key[i] + '</button>');
-                }
-            </script>
-        </div>
+  <body>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <h6>잠시 기다려 주세요.</h6>
     </div>
-</body>
-
+  </body>
 </html>
